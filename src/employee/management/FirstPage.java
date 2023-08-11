@@ -27,7 +27,17 @@ public class FirstPage extends JFrame implements ActionListener {
         clickhere.setBackground(Color.BLACK);
         clickhere.addActionListener(this);
         image.add(clickhere);
-        // we want to update the button on the image or above the image(see the output)
+        // we want to add the button on the image or above the image(see the output)
+
+        JButton quit = new JButton("Quit");
+        quit.setBounds(20, 400,100,70);
+        quit.setForeground(Color.WHITE);
+        quit.setBackground(Color.BLACK);
+        quit.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent ae){
+                System.exit(0);
+            }
+        });
 
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
